@@ -1,0 +1,122 @@
+:root{
+    --color1:#f0f0f0;
+    --color2:#333;
+    --color3:#555;
+    --color4:#3ae4b1;
+    --colorLinear:linear-gradient(purple,aqua);
+    --fontFamily:"Cascadia Code",sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:var(--color1);
+    font-family:var(--fontFamily);
+}
+
+/******************************
+Estilizando o Hero
+********************************/
+#inicio{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    background:var(--color2);
+    justify-content:center;
+    align-items:center;
+    opacity:1;
+    transtion: opacity 1s ease-in-out;/*faz um efeito suave de entrada e saida*/
+}
+#imgHero{
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    margin-top:20px;
+    animation: rodar 1s ease-in-out;
+}
+
+@keyframes rodar{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+#titulo{
+      margin-top:100px;
+    text-align:center;
+    font-size:3rem;
+    background:var(--colorLinear);
+    text-transform:uppercase;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    animation: efeito 1s ease-in-out;
+}
+@keyframes efeito {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+        transform:translateY(-10px);
+    }
+}
+
+
+
+header{
+    background:var(--color3);/*cor do fundo*/
+    color:var(--color4);/*cor da fonte*/
+    padding:20px; /*espaçamento interno*/
+    align-items:center;/*centraliza os items ao centro*/
+    display:flex;/*deixa um do lado do outro*/
+    justify-content:space-between; /*ajusta o conteudo*/
+    border-radius:50px;/*arredonda a borda em 50px*/
+}
+header #logo{
+    width:70px;/*definindo largura*/
+    height:70px; /*definindo altura*/
+    border-radius:50%; /*arredondando as bordas*/
+}
+
+header nav ul{
+    display:flex;
+    gap:20px;/*espaço entre elementos*/
+    list-style:none;/*remove as listas(bolinhas)*/
+}
+
+header nav ul li a{
+    text-decoration:none; /*remove a linha abaixo do texto*/
+    color:var(--color1);/*cor da fonte*/
+    font-weight:800;  /*deixa o texto negrito*/
+}
+/*hover é uma pseudo-classe, faz um efeito ao passar o mouse*/
+header nav ul li a:hover{
+    color:var(--color4);/*cor da fonte*/
+    text-decoration:underline;/*adiciona uma linha abaixo do texto*/
+    text-transform:uppercase; /*deixa o texto maiúsculo*/
+}
+.cor{
+    width:30px;/*define a largura*/
+    height:30px;/*define a altura*/
+    border-radius:50px;/*arredondando as bordas*/
+    background:var(--colorLinear);/*muda a cor de fundo com degrade*/
+}
+#texto{
+    margin-top:100px;
+    text-align:center;
+    font-size:4em;
+    background:var(--colorLinear);
+    text-transform:uppercase;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
