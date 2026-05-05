@@ -32,7 +32,7 @@ Estilizando o Hero
     justify-content:center;
     align-items:center;
     opacity:1;
-    transtion: opacity 1s ease-in-out;/*faz um efeito suave de entrada e saida*/
+    transition: opacity 1s ease-in-out;/*faz um efeito suave de entrada e saida*/
 }
 #imgHero{
     width:500px;
@@ -71,6 +71,20 @@ Estilizando o Hero
     }
 }
 
+#frase{
+    font-size:1.5rem;
+    color:var(--color4);
+    animation: efeito2 1s ease-in-out;
+}
+
+@keyframes efeito2 {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.5);
+    }
+}
 
 
 header{
