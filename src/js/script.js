@@ -16,3 +16,16 @@ window.onload = function(){
 function trocar(cor){
  document.body.style.background=cor;
 }
+
+//  MENU HAMBURGUER
+
+document.addEventListener("DOMContentLoaded",()=>{
+    const menuIcone = document.getElementById("menu-icone");
+    const navMenu =document.querySelector("nav");
+    if(menuIcone && navMenu){
+        menuIcone.onclick=()=>{
+                navMenu.classList.toggle("active");
+                menuIcone.classList.toggle("open");
+        }
+    }
+})
